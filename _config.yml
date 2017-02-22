@@ -69,5 +69,5 @@ theme: tranquilpeak
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:letitbeat/letitbeat.github.com.git
+  repo: git@github.com:letitbeat/letitbeat.github.io.git
   branch: master
