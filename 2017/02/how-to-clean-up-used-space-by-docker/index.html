@@ -13,25 +13,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
-To list this you can run:
-1docker ps -a
-After selecting the unused containers, you can remove them with the fol">
+    <meta name="description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful co">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="How To Clean Up Used Space by Docker">
 <meta property="og:url" content="http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/index.html">
 <meta property="og:site_name" content="Jose Reye's Site">
-<meta property="og:description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
-To list this you can run:
-1docker ps -a
-After selecting the unused containers, you can remove them with the fol">
-<meta property="og:updated_time" content="2017-02-26T05:08:38.000Z">
+<meta property="og:description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful co">
+<meta property="og:updated_time" content="2017-02-28T18:50:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Clean Up Used Space by Docker">
-<meta name="twitter:description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
-To list this you can run:
-1docker ps -a
-After selecting the unused containers, you can remove them with the fol">
+<meta name="twitter:description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful co">
 <meta name="twitter:creator" content="@letitbeet">
     
     
@@ -200,7 +191,7 @@ After selecting the unused containers, you can remove them with the fol">
         
             <li class="sidebar-button">
                 
-                    <a  class="sidebar-button-link " href="https://pa.linkedin.com/in/josereyesch" target="_blank">
+                    <a  class="sidebar-button-link " href="https://www.linkedin.com/in/josereyesch" target="_blank">
                 
                     <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
                     <span class="sidebar-button-desc">LinkedIn</span>
@@ -255,7 +246,8 @@ After selecting the unused containers, you can remove them with the fol">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
+            <p>Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.<br><a id="more"></a></p>
+<p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
 <p>To list this you can run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-a</span></div></pre></td></tr></table></figure>
 <p>After selecting the unused containers, you can remove them with the following command:</p>
@@ -263,12 +255,29 @@ After selecting the unused containers, you can remove them with the fol">
 <div class="alert info"><p>The flag -v is used to also delete any associated volume.</p>
 </div>
 <p>Then, following command should be executed</p>
-<p>To delete “dead” containers. (containers with status=dead whose creation failed):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-f</span> status=dead --format <span class="string">'&#123;\&#123; .ID \&#125;&#125;'</span> | xargs -r docker rm -v</div></pre></td></tr></table></figure>
-<p>To delete volumes not associated with any containers ( This usually happens when container are deleted without -v flag of docker rm command):</p>
+<ul>
+<li>To delete “dead” containers. (containers with status=dead whose creation failed):</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-f</span> status=dead --format <span class="string">'&#123;&#123; .ID &#125;&#125;'</span> | xargs -r docker rm -v</div></pre></td></tr></table></figure>
+<ul>
+<li>To delete volumes not associated with any containers ( This usually happens when container are deleted without -v flag of docker rm command):</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker volume ls -qf dangling=<span class="literal">true</span> | xargs -r docker volume rm</div></pre></td></tr></table></figure>
-<p>To delete images not longer referenced by any tag (<none>):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images --digests --format <span class="string">'&#123;\&#123;.Repository\&#125;&#125;:&#123;\&#123;.Tag\&#125;&#125;@&#123;\&#123;.Digest\&#125;&#125;'</span> | sed <span class="_">-ne</span> <span class="string">'s/:&lt;none&gt;@/@/p'</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></none></p>
-<p>To delete images not longer referenced by any name:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images -qf dangling=<span class="literal">true</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></p>
+<ul>
+<li>To delete images not longer referenced by any tag (<none>):</none></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images --digests --format <span class="string">'&#123;&#123;.Repository&#125;&#125;:&#123;&#123;.Tag&#125;&#125;@&#123;&#123;.Digest&#125;&#125;'</span> | sed <span class="_">-ne</span> <span class="string">'s/:&lt;none&gt;@/@/p'</span> | xargs -r docker rmi</div></pre></td></tr></table></figure>
+<ul>
+<li>To delete images not longer referenced by any name:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images -qf dangling=<span class="literal">true</span> | xargs -r docker rmi</div></pre></td></tr></table></figure>
+<ul>
+<li>To delete temporary files (blobs which were left by some interrupted docker pull):</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm <span class="_">-f</span> /var/lib/docker/tmp/*</div></pre></td></tr></table></figure>
+<div class="alert warning"><p>Note: This files are useful in case we want to resume the docker pull command.</p>
+</div>
+<p>Hope you find this post useful and keep Dockering! </p>
 
             
         </div>
