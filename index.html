@@ -37,6 +37,17 @@
     <link rel="stylesheet" href="/assets/css/style-nuvue6sithwirecbhvw3dkaobiojqvtadsnhguwi7k04xklybw5djl1smadp.min.css">
     <!--STYLES END-->
     
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-92603467-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
     
 </head>
 
@@ -214,6 +225,61 @@
                 
 
 <section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2017/02/how-to-clean-up-used-space-by-docker/">
+                            How To Clean Up Used Space by Docker
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-02-25T22:37:18-05:00">
+	
+		    Feb 25, 2017
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
+<p>To list this you can run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-a</span></div></pre></td></tr></table></figure>
+<p>After selecting the unused containers, you can remove them with the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker rm -v &#123;name or hexadecimal container identifier&#125;</div></pre></td></tr></table></figure>
+<div class="alert info"><p>The flag -v is used to also delete any associated volume.</p>
+</div>
+<p>Then, following command should be executed</p>
+<p>To delete “dead” containers. (containers with status=dead whose creation failed):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-f</span> status=dead --format <span class="string">'&#123;\&#123; .ID \&#125;&#125;'</span> | xargs -r docker rm -v</div></pre></td></tr></table></figure>
+<p>To delete volumes not associated with any containers ( This usually happens when container are deleted without -v flag of docker rm command):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker volume ls -qf dangling=<span class="literal">true</span> | xargs -r docker volume rm</div></pre></td></tr></table></figure>
+<p>To delete images not longer referenced by any tag (<none>):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images --digests --format <span class="string">'&#123;\&#123;.Repository\&#125;&#125;:&#123;\&#123;.Tag\&#125;&#125;@&#123;\&#123;.Digest\&#125;&#125;'</span> | sed <span class="_">-ne</span> <span class="string">'s/:&lt;none&gt;@/@/p'</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></none></p>
+<p>To delete images not longer referenced by any name:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images -qf dangling=<span class="literal">true</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/02/how-to-clean-up-used-space-by-docker/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
     
     
     <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">

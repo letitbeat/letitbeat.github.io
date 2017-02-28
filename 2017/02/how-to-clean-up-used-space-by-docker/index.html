@@ -6,22 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jose Reye&#39;s Site">
-    <title>Archives: 2017 - Jose Reye&#39;s Site</title>
+    <title>How To Clean Up Used Space by Docker - Jose Reye&#39;s Site</title>
     <meta name="author" content="Jose Reyes">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Personal site to share a bit about me and the things that I like.">
+    <meta name="description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
+To list this you can run:
+1docker ps -a
+After selecting the unused containers, you can remove them with the fol">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Jose Reye's Site">
-<meta property="og:url" content="http://joser.com/archives/2017/index.html">
+<meta property="og:title" content="How To Clean Up Used Space by Docker">
+<meta property="og:url" content="http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/index.html">
 <meta property="og:site_name" content="Jose Reye's Site">
-<meta property="og:description" content="Personal site to share a bit about me and the things that I like.">
+<meta property="og:description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
+To list this you can run:
+1docker ps -a
+After selecting the unused containers, you can remove them with the fol">
+<meta property="og:updated_time" content="2017-02-26T05:08:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jose Reye's Site">
-<meta name="twitter:description" content="Personal site to share a bit about me and the things that I like.">
+<meta name="twitter:title" content="How To Clean Up Used Space by Docker">
+<meta name="twitter:description" content="First, you must check and remove stopped Docker containers that will no longer be used. 
+To list this you can run:
+1docker ps -a
+After selecting the unused containers, you can remove them with the fol">
 <meta name="twitter:creator" content="@letitbeet">
     
     
@@ -60,7 +70,7 @@
         
     
 
-<header id="header" data-behavior="2">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <h1 class="header-title">
         <a class="header-title-link" href="/ ">Jose Reye&#39;s Site</a>
@@ -82,7 +92,7 @@
 
     
 
-<nav id="sidebar" data-behavior="2">
+<nav id="sidebar" data-behavior="4">
     
         <div class="sidebar-profile">
             <a href="/#about">
@@ -218,28 +228,21 @@
 </nav>
 
             
-            <div id="main" data-behavior="2"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    
-
-<section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/02/how-to-clean-up-used-space-by-docker/">
-                            How To Clean Up Used Space by Docker
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            How To Clean Up Used Space by Docker
+        </h1>
+    
+    <div class="post-meta">
     <time itemprop="datePublished" datetime="2017-02-25T22:37:18-05:00">
 	
 		    Feb 25, 2017
@@ -248,10 +251,11 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
 <p>To list this you can run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-a</span></div></pre></td></tr></table></figure>
 <p>After selecting the unused containers, you can remove them with the following command:</p>
@@ -266,68 +270,87 @@
 <p>To delete images not longer referenced by any tag (<none>):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images --digests --format <span class="string">'&#123;\&#123;.Repository\&#125;&#125;:&#123;\&#123;.Tag\&#125;&#125;@&#123;\&#123;.Digest\&#125;&#125;'</span> | sed <span class="_">-ne</span> <span class="string">'s/:&lt;none&gt;@/@/p'</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></none></p>
 <p>To delete images not longer referenced by any name:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images -qf dangling=<span class="literal">true</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></p>
 
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2017/02/how-to-clean-up-used-space-by-docker/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/01/my-first-post/">
-                            First post ever...well
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-01-18T00:39:12-05:00">
-	
-		    Jan 18, 2017
-    	
-    </time>
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/docker/">docker</a> <a class="tag tag--primary tag--small t-link" href="/tags/how-to/">how to</a>
 
             </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/my-first-post/" data-tooltip="First post ever...well">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
             
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h3 id="Memories"><a href="#Memories" class="headerlink" title="Memories"></a>Memories</h3><p>It’s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I’m writing a “real post” well,  actually here my first attempt <a href="https://beatnbyte.blogspot.com/">beatnbyte.blogspot.com</a> more than 6 years ago!.<br>
-                    
-                        <a href="/2017/01/my-first-post/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
+                <a class="post-action-btn btn btn--default" href="#">
             
-        </div>
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">page 1 of 1</li>
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
 
 
 
@@ -338,6 +361,89 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/my-first-post/" data-tooltip="First post ever...well">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
             
         </div>
         
@@ -382,6 +488,25 @@
     <!--SCRIPTS-->
 <script src="/assets/js/script-i4qo6jx6jji9fg0dftpya6ivemizsbow4fhow76d8dwpm7m1wbvi378ssumx.min.js"></script>
 <!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/';
+                 
+                    this.page.identifier = '2017/02/how-to-clean-up-used-space-by-docker/';
+                                  
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'jose-reyes-personal';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
 

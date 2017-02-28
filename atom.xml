@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://joser.com/"/>
-  <updated>2017-02-20T04:06:16.000Z</updated>
+  <updated>2017-02-26T05:08:38.000Z</updated>
   <id>http://joser.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How To Clean Up Used Space by Docker</title>
+    <link href="http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/"/>
+    <id>http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/</id>
+    <published>2017-02-26T03:37:18.000Z</published>
+    <updated>2017-02-26T05:08:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>First, you must check and remove stopped Docker containers that will no longer be used. </p>
+<p>To list this you can run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-a</span></div></pre></td></tr></table></figure>
+<p>After selecting the unused containers, you can remove them with the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker rm -v &#123;name or hexadecimal container identifier&#125;</div></pre></td></tr></table></figure>
+<div class="alert info"><p>The flag -v is used to also delete any associated volume.</p>
+</div>
+<p>Then, following command should be executed</p>
+<p>To delete “dead” containers. (containers with status=dead whose creation failed):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-f</span> status=dead --format <span class="string">'&#123;\&#123; .ID \&#125;&#125;'</span> | xargs -r docker rm -v</div></pre></td></tr></table></figure>
+<p>To delete volumes not associated with any containers ( This usually happens when container are deleted without -v flag of docker rm command):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker volume ls -qf dangling=<span class="literal">true</span> | xargs -r docker volume rm</div></pre></td></tr></table></figure>
+<p>To delete images not longer referenced by any tag (<none>):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images --digests --format <span class="string">'&#123;\&#123;.Repository\&#125;&#125;:&#123;\&#123;.Tag\&#125;&#125;@&#123;\&#123;.Digest\&#125;&#125;'</span> | sed <span class="_">-ne</span> <span class="string">'s/:&lt;none&gt;@/@/p'</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></none></p>
+<p>To delete images not longer referenced by any name:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images -qf dangling=<span class="literal">true</span> | xargs -r docker rmi</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;First, you must check and remove stopped Docker containers that will no longer be used. &lt;/p&gt;
+&lt;p&gt;To list this you can run:&lt;/p&gt;
+&lt;figure cla
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://joser.com/tags/docker/"/>
+    
+      <category term="how to" scheme="http://joser.com/tags/how-to/"/>
+    
+  </entry>
   
   <entry>
     <title>First post ever...well</title>
