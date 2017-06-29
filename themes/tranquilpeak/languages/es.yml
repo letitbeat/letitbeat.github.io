@@ -16,6 +16,7 @@ global:
     facebook: "Facebook"
     google_plus: "Google Plus"
     linkedin: "LinkedIn"
+    resume: "CV"
     mail: "Correo"
     rss: "RSS"
     share_on_google_plus: "Compartir en Google Plus"

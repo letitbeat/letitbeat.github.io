@@ -16,6 +16,7 @@ global:
     facebook: "Facebook"
     google_plus: "Google Plus"
     linkedin: "LinkedIn"
+    resume: "Resume"
     mail: "Mail"
     rss: "RSS"
     share_on_google_plus: "Share on Google Plus"
@@ -58,4 +59,4 @@ author:
     # Your biography (Markdown and HTML supported)
     bio: "Software Engineer who enjoys coding while listening good beats."
     # Your job
-    job: "Software Engineer"
+    job: "Fullstack Software Engineer with strong focus in backend"

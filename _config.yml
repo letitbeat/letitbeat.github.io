@@ -5,14 +5,14 @@
 # Site
 title: Jose Reye's Site
 subtitle: Software Engineer
-description: Personal site to share a bit about me and the things that I like.
+description: Personal site to share a bit about me and the things I like.
 author: Jose Reyes
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://joser.com
+url: http://josemr.com
 root: /
 permalink: :year/:month/:title/
 permalink_defaults: :title/
