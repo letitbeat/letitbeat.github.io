@@ -4,9 +4,9 @@
   <subtitle>Software Engineer</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://joser.com/"/>
+  <link href="http://josemr.com/"/>
   <updated>2017-02-28T18:50:23.000Z</updated>
-  <id>http://joser.com/</id>
+  <id>http://josemr.com/</id>
   
   <author>
     <name>Jose Reyes</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>How To Clean Up Used Space by Docker</title>
-    <link href="http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/"/>
-    <id>http://joser.com/2017/02/how-to-clean-up-used-space-by-docker/</id>
+    <link href="http://josemr.com/2017/02/how-to-clean-up-used-space-by-docker/"/>
+    <id>http://josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</id>
     <published>2017-02-26T03:37:18.000Z</published>
     <updated>2017-02-28T18:50:23.000Z</updated>
     
@@ -63,16 +63,16 @@
     </summary>
     
     
-      <category term="docker" scheme="http://joser.com/tags/docker/"/>
+      <category term="docker" scheme="http://josemr.com/tags/docker/"/>
     
-      <category term="how to" scheme="http://joser.com/tags/how-to/"/>
+      <category term="how to" scheme="http://josemr.com/tags/how-to/"/>
     
   </entry>
   
   <entry>
     <title>First post ever...well</title>
-    <link href="http://joser.com/2017/01/my-first-post/"/>
-    <id>http://joser.com/2017/01/my-first-post/</id>
+    <link href="http://josemr.com/2017/01/my-first-post/"/>
+    <id>http://josemr.com/2017/01/my-first-post/</id>
     <published>2017-01-18T05:39:12.000Z</published>
     <updated>2017-02-20T04:06:16.000Z</updated>
     
@@ -89,11 +89,11 @@
     </summary>
     
     
-      <category term="personal" scheme="http://joser.com/tags/personal/"/>
+      <category term="personal" scheme="http://josemr.com/tags/personal/"/>
     
-      <category term="software" scheme="http://joser.com/tags/software/"/>
+      <category term="software" scheme="http://josemr.com/tags/software/"/>
     
-      <category term="web" scheme="http://joser.com/tags/web/"/>
+      <category term="web" scheme="http://josemr.com/tags/web/"/>
     
   </entry>
   
