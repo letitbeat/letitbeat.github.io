@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jose Reye&#39;s Site</title>
-    <link>josemr.com/post/</link>
+    <link>https://josemr.com/post/</link>
     <description>Recent content in Posts on Jose Reye&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Feb 2017 17:22:14 +0100</lastBuildDate><atom:link href="josemr.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Feb 2017 17:22:14 +0100</lastBuildDate><atom:link href="https://josemr.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Clean Up Used Space by Docker</title>
-      <link>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</link>
+      <link>https://josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</link>
       <pubDate>Sat, 25 Feb 2017 17:22:14 +0100</pubDate>
       
-      <guid>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</guid>
+      <guid>https://josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</guid>
       <description>&lt;p&gt;Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>First post ever...well</title>
-      <link>josemr.com/2017/01/first-post-ever...well/</link>
+      <link>https://josemr.com/2017/01/first-post-ever...well/</link>
       <pubDate>Wed, 18 Jan 2017 17:10:56 +0100</pubDate>
       
-      <guid>josemr.com/2017/01/first-post-ever...well/</guid>
+      <guid>https://josemr.com/2017/01/first-post-ever...well/</guid>
       <description>&lt;h2 id=&#34;memories&#34;&gt;Memories&lt;/h2&gt;
 &lt;p&gt;It&amp;rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&amp;rsquo;m writing a &amp;ldquo;real post&amp;rdquo; well,  actually here my first attempt &lt;a href=&#34;https://beatnbyte.blogspot.com/&#34;&gt;beatnbyte.blogspot.com&lt;/a&gt; more than 6 years ago!.&lt;/p&gt;</description>
     </item>
