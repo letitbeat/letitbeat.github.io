@@ -7,35 +7,33 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Jose Reyes">
-<meta name="keywords" content="tech, docker">
-<meta name="description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.">
+<meta name="keywords" content="">
+<meta name="description" content="Memories
+It&rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&rsquo;m writing a &ldquo;real post&rdquo; well,  actually here my first attempt beatnbyte.blogspot.com more than 6 years ago!.">
 
 
-<meta property="og:description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.">
+<meta property="og:description" content="Memories
+It&rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&rsquo;m writing a &ldquo;real post&rdquo; well,  actually here my first attempt beatnbyte.blogspot.com more than 6 years ago!.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Clean Up Used Space by Docker">
-<meta name="twitter:title" content="How to Clean Up Used Space by Docker">
-<meta property="og:url" content="josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
-<meta property="twitter:url" content="josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+<meta property="og:title" content="First post ever...well">
+<meta name="twitter:title" content="First post ever...well">
+<meta property="og:url" content="josemr.com/2017/01/first-post-ever...well/">
+<meta property="twitter:url" content="josemr.com/2017/01/first-post-ever...well/">
 <meta property="og:site_name" content="Jose Reye&#39;s Site">
-<meta property="og:description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.">
-<meta name="twitter:description" content="Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.">
+<meta property="og:description" content="Memories
+It&rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&rsquo;m writing a &ldquo;real post&rdquo; well,  actually here my first attempt beatnbyte.blogspot.com more than 6 years ago!.">
+<meta name="twitter:description" content="Memories
+It&rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&rsquo;m writing a &ldquo;real post&rdquo; well,  actually here my first attempt beatnbyte.blogspot.com more than 6 years ago!.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2017-02-25T17:22:14">
+    <meta property="article:published_time" content="2017-01-18T17:10:56">
   
   
-    <meta property="article:modified_time" content="2017-02-25T17:22:14">
+    <meta property="article:modified_time" content="2017-01-18T17:10:56">
   
   
   
-  
-    
-      <meta property="article:tag" content="docker">
-    
-      <meta property="article:tag" content="how to">
-    
   
 
 
@@ -51,9 +49,6 @@
 
 
 
-  <meta property="og:image" content="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/11/06110003/docker.png">
-  <meta property="twitter:image" content="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/11/06110003/docker.png">
-
 
 
 
@@ -62,14 +57,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/5b762a488f6212127943b92b54aa02fb?s=640">
 
 
-    <title>How to Clean Up Used Space by Docker</title>
+    <title>First post ever...well</title>
 
     <link rel="icon" href="josemr.com/favicon.png">
     
 
     
 
-    <link rel="canonical" href="josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+    <link rel="canonical" href="josemr.com/2017/01/first-post-ever...well/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -252,15 +247,15 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      How to Clean Up Used Space by Docker
+      First post ever...well
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-02-25T17:22:14&#43;01:00">
+      <time itemprop="datePublished" datetime="2017-01-18T17:10:56&#43;01:00">
         
-  February 25, 2017
+  January 18, 2017
 
       </time>
     
@@ -271,57 +266,17 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.</p>
-<p>First, you must check and remove stopped Docker containers that will no longer be used.</p>
-<p>To list this you can run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   docker ps -a
-</code></pre></div><p>After selecting the unused containers, you can remove them with the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   docker rm -v <span style="color:#f92672">{</span>name or hexadecimal container identifier<span style="color:#f92672">}</span>
-</code></pre></div><div class="alert info ">
-  <p>The flag -v is used to also delete any associated volume.</p>
-</div>
-<p>Then, following command should be executed</p>
-<ul>
-<li>To delete &ldquo;dead&rdquo; containers. (containers with status=dead whose creation failed):</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   docker ps -f status<span style="color:#f92672">=</span>dead --format <span style="color:#e6db74">&#39;{{ .ID }}&#39;</span> | xargs -r docker rm -v
-</code></pre></div><ul>
-<li>To delete volumes not associated with any containers ( This usually happens when container are deleted without -v flag of docker rm command):</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker volume ls -qf dangling<span style="color:#f92672">=</span>true | xargs -r docker volume rm
-</code></pre></div><ul>
-<li>To delete images not longer referenced by any tag (<code>&lt;none&gt;</code>):</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker images --digests --format <span style="color:#e6db74">&#39;{{.Repository}}:{{.Tag}}@{{.Digest}}&#39;</span> | sed -ne <span style="color:#e6db74">&#39;s/:&lt;none&gt;@/@/p&#39;</span> | xargs -r docker rmi
-</code></pre></div><ul>
-<li>To delete images not longer referenced by any name:</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker images -qf dangling<span style="color:#f92672">=</span>true | xargs -r docker rmi
-</code></pre></div><ul>
-<li>To delete temporary files (blobs which were left by some interrupted docker pull):</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -f /var/lib/docker/tmp/*
-</code></pre></div><div class="alert warning ">
-  <p>Note: This files are useful in case we want to resume the docker pull command.</p>
-</div>
-<p>Hope you find this post useful and keep Dockering!</p>
+              <h2 id="memories">Memories</h2>
+<p>It&rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&rsquo;m writing a &ldquo;real post&rdquo; well,  actually here my first attempt <a href="https://beatnbyte.blogspot.com/">beatnbyte.blogspot.com</a> more than 6 years ago!.</p>
+<p>I still remember those old web days, as probably most of you. Now everything seems different, exciting and never-ending! Can&rsquo;t believe one of my firsts web projects is still online <a href="http://watermala.com/">watermala.com</a> 10 years ago, when <a href="http://php.net">php</a>, <a href="https://www.w3.org/TR/xhtml1/">XHTML</a>, <a href="https://www.w3.org/TR/CSS21/">CSS 2.1</a> and &ldquo;plain&rdquo; <a href="http://www.w3schools.com/js/">JavaScript</a> were probably the most preferred web stack.</p>
+<p>Now those days are gone and we are constantly impressed with all the new technologies, frameworks and all those amazing things people and companies are working on, a good example for could be the guys from <a href="http://www.spacex.com/">spaceX</a>.</p>
+<p>So in this site, I plan to share a bit of some of the things I enjoy most in this life cycle which are: technology, software development, music and random thoughts.</p>
+<p>That being said, enjoy!</p>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="josemr.com/tags/docker/">docker</a>
-
-  <a class="tag tag--primary tag--small" href="josemr.com/tags/how-to/">how to</a>
-
-                  </div>
-                
               
             
             <div class="post-actions-wrap">
@@ -331,7 +286,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="josemr.com/2017/02/how-to-clean-up-used-space-by-docker/" data-tooltip="How to Clean Up Used Space by Docker">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -339,7 +294,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="josemr.com/2017/01/first-post-ever...well/" data-tooltip="First post ever...well">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -357,13 +312,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com/2017/01/first-post-ever...well/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=josemr.com/2017/01/first-post-ever...well/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -411,7 +366,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="josemr.com/2017/02/how-to-clean-up-used-space-by-docker/" data-tooltip="How to Clean Up Used Space by Docker">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -419,7 +374,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="josemr.com/2017/01/first-post-ever...well/" data-tooltip="First post ever...well">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -437,13 +392,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com/2017/01/first-post-ever...well/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=josemr.com/2017/02/how-to-clean-up-used-space-by-docker/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=josemr.com/2017/01/first-post-ever...well/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -473,13 +428,13 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com%2F2017%2F02%2Fhow-to-clean-up-used-space-by-docker%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=josemr.com%2F2017%2F01%2Ffirst-post-ever...well%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=josemr.com%2F2017%2F02%2Fhow-to-clean-up-used-space-by-docker%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=josemr.com%2F2017%2F01%2Ffirst-post-ever...well%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
@@ -572,9 +527,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'josemr.com\/2017\/02\/how-to-clean-up-used-space-by-docker\/';
+          this.page.url = 'josemr.com\/2017\/01\/first-post-ever...well\/';
           
-            this.page.identifier = '\/2017\/02\/how-to-clean-up-used-space-by-docker\/'
+            this.page.identifier = '\/2017\/01\/first-post-ever...well\/'
           
         };
         (function() {

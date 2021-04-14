@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jose Reye&#39;s Site</title>
+    <link>josemr.com/</link>
+    <description>Recent content on Jose Reye&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Feb 2017 17:22:14 +0100</lastBuildDate><atom:link href="josemr.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume</title>
+      <link>josemr.com/resume/</link>
+      <pubDate>Fri, 08 Feb 2019 14:52:07 +0100</pubDate>
+      
+      <guid>josemr.com/resume/</guid>
+      <description>José Manuel Reyes Paris, France
+E-mail: josereyesch [ at ] gmail
+Summary I&amp;rsquo;m a cross-functional Software Engineer with 10+ years&#39; experience, passionate about cloud architectures and distributed systems.
+Work Experience Full Stack Developer Hilti, Paris, France (Jan 2020 - present)
+ Currently building tools and data pipelines to enhance strategic digital marketing campaigns decisions. Python BigQuery RedShift AWS  Research and Development Engineer Telecom SudParis, Evry, France (Apr 2018 - Nov 2019)</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>josemr.com/about/</link>
+      <pubDate>Fri, 08 Feb 2019 14:51:52 +0100</pubDate>
+      
+      <guid>josemr.com/about/</guid>
+      <description>I&amp;rsquo;m a cross-functional Software Engineer, passionate about cloud architectures and distributed systems.
+I love learning new things, playing around with the latest tech, and figuring out how things work. There’s something about the process of solving problems that excites me. Currently I&amp;rsquo;m working in the data engineering and infrastructure world, in general I keep learning about technologies.
+I strongly believe in Kaizen as philosophy of work and life, because for me, there is always something to improve and hence learn from it.</description>
+    </item>
+    
+    <item>
+      <title>How to Clean Up Used Space by Docker</title>
+      <link>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</link>
+      <pubDate>Sat, 25 Feb 2017 17:22:14 +0100</pubDate>
+      
+      <guid>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</guid>
+      <description>&lt;p&gt;Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First post ever...well</title>
+      <link>josemr.com/2017/01/first-post-ever...well/</link>
+      <pubDate>Wed, 18 Jan 2017 17:10:56 +0100</pubDate>
+      
+      <guid>josemr.com/2017/01/first-post-ever...well/</guid>
+      <description>&lt;h2 id=&#34;memories&#34;&gt;Memories&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s very interesting (at least to me) that after being in this Digital World for more than 15 years, this is the first time I&amp;rsquo;m writing a &amp;ldquo;real post&amp;rdquo; well,  actually here my first attempt &lt;a href=&#34;https://beatnbyte.blogspot.com/&#34;&gt;beatnbyte.blogspot.com&lt;/a&gt; more than 6 years ago!.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

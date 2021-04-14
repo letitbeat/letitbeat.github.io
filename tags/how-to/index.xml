@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how to on Jose Reye&#39;s Site</title>
+    <link>josemr.com/tags/how-to/</link>
+    <description>Recent content in how to on Jose Reye&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Feb 2017 17:22:14 +0100</lastBuildDate><atom:link href="josemr.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Clean Up Used Space by Docker</title>
+      <link>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</link>
+      <pubDate>Sat, 25 Feb 2017 17:22:14 +0100</pubDate>
+      
+      <guid>josemr.com/2017/02/how-to-clean-up-used-space-by-docker/</guid>
+      <description>&lt;p&gt;Using Docker has become very handy to must of us when working with multiple environments. However, one problem that we noticed is the incredible disk usage of it. So in this post I will list useful commands that could help us solving the issue.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
